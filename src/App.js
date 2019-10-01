@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import NewsFeed from './components/NewsFeed'
 import Dashboard from './components/Dashboard'
+import SignUp from './components/auth/SignUp'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path='/' render={()=> <NewsFeed/>} />
         <Route exact path='/user/dashboard' render={()=> <Dashboard />} />
+        <Route exact path='/signup' render={()=> <SignUp />} />
       </Switch>
     </div>
   );

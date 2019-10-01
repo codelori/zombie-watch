@@ -10,7 +10,7 @@ export default class Header extends React.Component{
 						<a href="user/dashboard">Dashboard</a>
 					</div>
 					<div className="sign-in-buttons">
-						<button>Sign Up</button>
+						<a href='/signup'>Sign Up</a>
 						<button>Login</button>
 					</div>
 				</nav>

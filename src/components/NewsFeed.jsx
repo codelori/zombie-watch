@@ -15,6 +15,7 @@ export default class NewsFeed extends React.Component{
 	}
 
 	fetchAllPosts = async () => {
+
 		const posts = await displayAllPosts();
 		console.log(posts)
 		this.setState({posts: posts});
