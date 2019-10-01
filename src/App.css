@@ -1,22 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center
 }
 
-.App-link {
-  color: #09d3ac;
+nav{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+  margin-right: 15px;
+  color: black;
+}
+a:visited{
+  color: black
+}
+
+.zombie-post{
+  background-color: #97BF04;
+  border-radius: 5px;
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 2px 4px 17px -7px rgba(0,0,0,0.75);
+}
+
+.zombie-post>img{
+  max-height: 200px;
+}
+
+.post-heading{
+  width: 100%;
+  display: flex;
+  justify-content: space-between
 }
