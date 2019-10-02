@@ -7,11 +7,9 @@ export default class Header extends React.Component{
 				<nav>
 					<div className="nav-container">
 						<a href="/">News Feed</a>
-						<a href="user/dashboard">Dashboard</a>
 					</div>
 					<div className="sign-in-buttons">
-						<a href='/signup'>Sign Up</a>
-						<button>Login</button>
+						<button onClick={evt=>this.props.handleCreatePost(evt)}>Create Post</button>
 					</div>
 				</nav>
 				<h1> Zombie Watch </h1>

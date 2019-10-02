@@ -13,3 +13,32 @@ export const displayAllPosts = async () => {
 		console.log(`Could not retrieve all posts: ${err}`)
 	}
 }
+
+export const deletePost = async (id) => {
+	try{
+		const resp = await zombiePostAPI.delete(`/${id}`)
+		console.log("RESP ", resp)
+		return resp
+	}catch(err){
+		console.log(`Could not delete posts: ${err}`)
+	}
+}
+
+export const updatePost = async (id, params) => {
+	try{
+		const resp = await zombiePostAPI.patch(`/${id}`, params)
+		return resp.body
+	}catch(err){
+		console.log(`Could not update post: ${err}`)
+	}
+}
+
+export const addPost = async (id, params) => {
+	try{
+		const resp = await zombiePostAPI.post(`/${id}`, params)
+		console.log(resp)
+		return resp.body
+	}catch(err){
+		console.log(`Could not add post: ${err}`)
+	}
+}

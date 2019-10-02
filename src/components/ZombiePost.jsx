@@ -11,6 +11,8 @@ export default class ZombiePost extends React.Component{
 				<img src={this.props.image} />
 				<p>{this.props.message}</p>
 				<h4>{this.props.location}</h4>
+				<button onClick={event => this.props.deletePost(this.props.id, event)}>X</button>
+				<button onClick={()=> this.props.handleEditPost(this.props.post)}>Edit</button>
 			</div>
 		)
 	}

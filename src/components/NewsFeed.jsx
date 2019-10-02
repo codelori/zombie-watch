@@ -1,5 +1,5 @@
 import React from 'react'
-import { displayAllPosts } from '../services/api-helper'
+import { displayAllPosts, deletePost } from '../services/api-helper'
 import ZombiePost from './ZombiePost'
 
 export default class NewsFeed extends React.Component{
@@ -10,52 +10,21 @@ export default class NewsFeed extends React.Component{
 		};
 	}
 
-	componentDidMount = () => {
-		this.fetchAllPosts();
-	}
-
-	fetchAllPosts = async () => {
-
-		const posts = await displayAllPosts();
-		console.log(posts)
-		this.setState({posts: posts});
-	}
-
-	renderAllposts = async () => {
-		const { posts } = this.state;
-		if (posts.length > 1) {
-			return posts.map( post => {
-				return (
-					<ZombiePost title={post.title} 
-					image={post.imgae}
-					location={post.location}
-					message={post.message}
-					date={post.date}
-					/>
-				);
-			});
-		} else {
-			return(
-				<h1>No zombie sightings...yet.</h1>
-			)
-		}
-
-	}
 
 	render(){
 		return(
 			<div className="news-feed">
 				<h3>Zombie Sightings</h3>
-				{ 
-					this.state.posts && this.state.posts.length > 0
-					? this.state.posts.map(post => <ZombiePost key={post.id} title={post.title} 
+				{this.props.posts.map(post => <ZombiePost key={post.id} title={post.title} 
 						id={post.id}
+						post={post}
 						image={post.image}
 						location={post.location}
 						message={post.message}
 						date={post.date}
+						deletePost={this.props.handleDeletePost}
+						handleEditPost={this.props.handleEditPost}
 						/>)
-					: <div className="tile notification is-warning">No Zombie Watch posts available</div>
 				}
 			</div>
 		)
