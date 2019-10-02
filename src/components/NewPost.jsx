@@ -24,8 +24,8 @@ export default class NewPost extends React.Component{
         title: this.state.title,
         message: this.state.message,
         image: this.state.image,
-        location: this.state.location,
-        date: this.state.date
+        postLocation: this.state.location,
+        postDate: this.state.date
       }
       await addPost(params.id, params)
       this.props.handleCreatePost(evt)

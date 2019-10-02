@@ -19,9 +19,9 @@ export default class NewsFeed extends React.Component{
 						id={post.id}
 						post={post}
 						image={post.image}
-						location={post.location}
+						location={post.postLocation}
 						message={post.message}
-						date={post.date}
+						date={post.postDate}
 						deletePost={this.props.handleDeletePost}
 						handleEditPost={this.props.handleEditPost}
 						/>)

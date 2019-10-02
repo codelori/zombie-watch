@@ -36,22 +36,22 @@ export default class EditPost extends React.Component{
             />
           </div>
           <div>
-            <label htmlFor="location">Location</label>
+            <label htmlFor="postLocation">Location</label>
             <input
-              id="location"
+              id="postLocation"
               type="text"
-              name="location"
-              defaultValue={this.props.post.location}
+              name="postLocation"
+              defaultValue={this.props.post.postLocation}
               onChange={this.props.onEditFormChange}
             />
           </div>
           <div>
-            <label htmlFor="date">Date</label>
+            <label htmlFor="postDate">Date</label>
             <input
-              id="date"
+              id="postDate"
               type="date"
-              name="date"
-              defaultValue={this.props.post.date}
+              name="postDate"
+              defaultValue={this.props.post.postDate}
               onChange={this.props.onEditFormChange}
             />
           </div>
